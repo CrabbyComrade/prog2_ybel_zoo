@@ -2,7 +2,7 @@ package zoo;
 
 import zoo.fishes.Fish;
 
-public class Aquarium extends Zoo<Habitat<Fish>, Fish> { // Only allows Habitats of Fish
+public class Aquarium extends Zoo<Habitat<Fish>> { // Only allows Habitats of Fish
 
     public Aquarium() {
         super();
