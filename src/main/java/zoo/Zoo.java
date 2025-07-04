@@ -42,6 +42,8 @@ public class Zoo<H extends Habitat<? extends Animal>> {
         // habitats accepting one animal type each
         Habitat<Tiger> tigerHabitat = new Habitat<>("Tiger Habitat");
         Habitat<Catfish> catfishHabitat = new Habitat<>("Catfish Habitat");
+        tigerHabitat.add(new Tiger());
+        catfishHabitat.add(new Catfish());
 
         Zoo<Habitat<? extends Animal>> zoo = new Zoo<>();
 
@@ -49,5 +51,11 @@ public class Zoo<H extends Habitat<? extends Animal>> {
         zoo.build(catfishHabitat);
 
         zoo.visitAllHabitats();
+        for (Habitat<? extends Animal> h : zoo.habitats) {
+            for (Animal a : h.animals) {
+                a.getName();
+                a.move();
+            }
+        }
     }
 }

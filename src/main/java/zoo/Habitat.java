@@ -13,7 +13,7 @@ import zoo.mammals.primates.*;
 public class Habitat<T extends Animal> { // Only accepts types extending Animal
 
     private String name;
-    private List<T> animals;
+    public List<T> animals;
 
     public Habitat(String name) {
         this.name = name;
